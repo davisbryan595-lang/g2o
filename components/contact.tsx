@@ -97,15 +97,23 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 h-80 flex items-center justify-center"
+            className="relative bg-card/50 backdrop-blur-sm border border-border rounded-lg overflow-hidden h-80"
           >
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-accent/50 mx-auto mb-4" />
-              <p className="text-foreground/70">
-                123 Auto Detail Lane
-                <br />
-                Medford, OR 97501
-              </p>
+            <img
+              src="https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg"
+              alt="Garage workshop"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="relative h-full flex items-center justify-center">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
+                <p className="text-white font-semibold">
+                  123 Auto Detail Lane
+                  <br />
+                  Medford, OR 97501
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
