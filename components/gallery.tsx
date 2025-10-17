@@ -58,17 +58,18 @@ export default function Gallery() {
               className="group relative h-64 bg-card/50 backdrop-blur-sm border border-border rounded-lg overflow-hidden cursor-pointer hover:border-accent/50 transition-all"
               onClick={() => setSelectedImage(image.id)}
             >
-              {/* Placeholder with gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 group-hover:from-accent/30 group-hover:to-primary/30 transition-all" />
+              {/* Image */}
+              <img
+                src={image.image}
+                alt={image.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <ZoomIn className="w-8 h-8 text-accent/50 group-hover:text-accent group-hover:scale-110 transition-all mb-2" />
-                <h3 className="text-lg font-semibold text-center">{image.title}</h3>
+              {/* Content overlay */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/0 group-hover:bg-black/40 transition-all">
+                <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all mb-2" />
+                <h3 className="text-lg font-semibold text-center text-white opacity-0 group-hover:opacity-100 transition-all">{image.title}</h3>
               </div>
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </motion.div>
           ))}
         </div>
