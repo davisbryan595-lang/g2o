@@ -25,7 +25,7 @@ export default function Header() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F6a80af1db8104ff4a1b5bea732d858c0%2Fd611cde6711d46099464ffbfcbab9b34?format=webp&width=800"
               alt="G2O Auto Detailing Logo"
-              className="w-12 h-12 object-contain"
+              className="w-24 h-24 object-contain"
             />
           </Link>
 
