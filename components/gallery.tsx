@@ -82,24 +82,39 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="relative h-96 bg-card/50 backdrop-blur-sm border border-border rounded-lg overflow-hidden group"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10" />
+          {/* After image (background) */}
+          <img
+            src="https://images.pexels.com/photos/9622531/pexels-photo-9622531.jpeg"
+            alt="After detailing"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">Before & After</h3>
-              <p className="text-foreground/70">Drag to compare the transformation</p>
-            </div>
+          {/* Before image (overlay) */}
+          <div className="absolute inset-0 overflow-hidden">
+            <img
+              src="https://images.pexels.com/photos/6317765/pexels-photo-6317765.jpeg"
+              alt="Before detailing"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Labels */}
+          <div className="absolute top-4 left-4 bg-black/60 px-3 py-1 rounded text-white text-sm font-semibold">
+            Before
+          </div>
+          <div className="absolute top-4 right-4 bg-accent/80 px-3 py-1 rounded text-accent-foreground text-sm font-semibold">
+            After
           </div>
 
           {/* Draggable handle */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-32 bg-accent cursor-col-resize"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-40 bg-accent cursor-col-resize z-10"
             onMouseDown={handleDragStart}
             onMouseUp={handleDragEnd}
             whileHover={{ scaleX: 1.5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg">
               <ChevronLeft className="w-5 h-5 text-accent-foreground" />
               <ChevronRight className="w-5 h-5 text-accent-foreground" />
             </div>
