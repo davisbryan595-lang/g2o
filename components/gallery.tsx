@@ -7,12 +7,12 @@ import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, ZoomIn } from "lucide-react"
 
 const galleryImages = [
-  { id: 1, title: "Ceramic Coating", category: "exterior" },
-  { id: 2, title: "Paint Correction", category: "exterior" },
-  { id: 3, title: "Interior Detail", category: "interior" },
-  { id: 4, title: "Full Detail", category: "full" },
-  { id: 5, title: "Wheel Shine", category: "exterior" },
-  { id: 6, title: "Leather Care", category: "interior" },
+  { id: 1, title: "Ceramic Coating", category: "exterior", image: "https://images.pexels.com/photos/16157554/pexels-photo-16157554.jpeg" },
+  { id: 2, title: "Paint Correction", category: "exterior", image: "https://images.pexels.com/photos/6317765/pexels-photo-6317765.jpeg" },
+  { id: 3, title: "Interior Detail", category: "interior", image: "https://images.pexels.com/photos/1822838/pexels-photo-1822838.jpeg" },
+  { id: 4, title: "Full Detail", category: "full", image: "https://images.pexels.com/photos/9622531/pexels-photo-9622531.jpeg" },
+  { id: 5, title: "Wheel Shine", category: "exterior", image: "https://images.pexels.com/photos/4870729/pexels-photo-4870729.jpeg" },
+  { id: 6, title: "Leather Care", category: "interior", image: "https://images.pexels.com/photos/27298309/pexels-photo-27298309.jpeg" },
 ]
 
 export default function Gallery() {
