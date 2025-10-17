@@ -14,8 +14,17 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.pexels.com/photos/4870729/pexels-photo-4870729.jpeg"
+          alt="Premium car detailing background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background pointer-events-none" />
 
       {/* Animated accent lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

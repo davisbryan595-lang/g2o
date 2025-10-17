@@ -22,9 +22,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="#" className="flex items-center gap-2 group">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center">
-              <span className="text-lg font-bold text-primary">G2O</span>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F6a80af1db8104ff4a1b5bea732d858c0%2Fd611cde6711d46099464ffbfcbab9b34?format=webp&width=800"
+              alt="G2O Auto Detailing Logo"
+              className="w-12 h-12 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
