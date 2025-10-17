@@ -17,9 +17,11 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center">
-                <span className="text-sm font-bold text-primary">G2O</span>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F6a80af1db8104ff4a1b5bea732d858c0%2Fd611cde6711d46099464ffbfcbab9b34?format=webp&width=800"
+                alt="G2O Logo"
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-bold">G2O Detailing</span>
             </div>
             <p className="text-sm text-foreground/70">Premium auto detailing services in Medford, OR</p>
